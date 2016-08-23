@@ -229,8 +229,8 @@ public class EPCalendarPicker: UICollectionViewController {
                         cell.lblDay.textColor = self.dayDisabledTintColor
                     }
                 }
-                 if endDate != nil {
-                    if NSCalendar.currentCalendar().startOfDayForDate(cell.currentDate) > NSCalendar.currentCalendar().startOfDayForDate(endDate!) && startDate! < endDate! {
+                if endDate != nil {
+                    if NSCalendar.currentCalendar().startOfDayForDate(cell.currentDate) > NSCalendar.currentCalendar().startOfDayForDate(endDate!) {
                         cell.isCellSelectable = false
                         cell.lblDay.textColor = self.dayDisabledTintColor
                     }
