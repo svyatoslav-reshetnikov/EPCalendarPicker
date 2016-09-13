@@ -41,6 +41,8 @@ public class EPCalendarPicker: UICollectionViewController {
     public var backgroundImage: UIImage?
     public var backgroundColor: UIColor?
     
+    public var datesCount: Int?
+    
     private(set) public var startYear: Int
     private(set) public var endYear: Int
     
@@ -299,6 +301,7 @@ public class EPCalendarPicker: UICollectionViewController {
         }
         
         if cell.isCellSelectable! {
+            
             if arrSelectedDates.filter({ $0.isDateSameDay(cell.currentDate)
             }).count == 0 {
                 arrSelectedDates.append(cell.currentDate)
@@ -324,6 +327,10 @@ public class EPCalendarPicker: UICollectionViewController {
             }
         }
         
+        if arrSelectedDates.count > datesCount {
+            arrSelectedDates.removeFirst()
+            collectionView.reloadData()
+        }
     }
     
     //MARK: Button Actions

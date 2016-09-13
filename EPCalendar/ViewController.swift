@@ -31,6 +31,7 @@ class ViewController: UIViewController, EPCalendarPickerDelegate {
         calendarPicker.showsTodaysButton = true
         calendarPicker.hideDaysFromOtherMonth = true
         calendarPicker.tintColor = UIColor.orangeColor()
+        calendarPicker.datesCount = 2
 //        calendarPicker.barTintColor = UIColor.greenColor()
         calendarPicker.dayDisabledTintColor = UIColor.grayColor()
         calendarPicker.title = "Date Picker"
