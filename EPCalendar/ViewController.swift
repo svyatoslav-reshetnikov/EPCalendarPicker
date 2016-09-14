@@ -30,17 +30,17 @@ class ViewController: UIViewController, EPCalendarPickerDelegate {
         calendarPicker.hightlightsToday = true
         calendarPicker.showsTodaysButton = true
         calendarPicker.hideDaysFromOtherMonth = true
-        calendarPicker.tintColor = UIColor.orangeColor()
+        calendarPicker.tintColor = UIColor.orange
         calendarPicker.datesCount = 2
 //        calendarPicker.barTintColor = UIColor.greenColor()
-        calendarPicker.dayDisabledTintColor = UIColor.grayColor()
+        calendarPicker.dayDisabledTintColor = UIColor.gray
         calendarPicker.title = "Date Picker"
         
 //        calendarPicker.backgroundImage = UIImage(named: "background_image")
 //        calendarPicker.backgroundColor = UIColor.blueColor()
         
         let navigationController = UINavigationController(rootViewController: calendarPicker)
-        self.presentViewController(navigationController, animated: true, completion: nil)   
+        self.present(navigationController, animated: true, completion: nil)   
     }
     
     func epCalendarPicker(_: EPCalendarPicker, didCancel error : NSError) {
