@@ -52,9 +52,6 @@ extension NSDate {
     
     func firstDayOfMonth () -> NSDate {
         let calendar = NSCalendar.current
-        /*let dateComponent = calendar.components([.Year, .Month, .Day ], fromDate: self)
-        dateComponent.day = 1
-        return calendar.dateFromComponents(dateComponent)!*/
         
         var dateComponent = calendar.dateComponents([.year, .month, .day ], from: self as Date)
         dateComponent.day = 1
