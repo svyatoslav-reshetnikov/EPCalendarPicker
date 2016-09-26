@@ -44,7 +44,7 @@ class EPCalendarHeaderView: UICollectionReusableView {
         }
     }
     
-    func updateWeekendLabelColor(color: UIColor)
+    func updateWeekendLabelColor(_ color: UIColor)
     {
         if NSCalendar.current.firstWeekday == 2 {
             lblSixth.textColor = color
@@ -55,7 +55,7 @@ class EPCalendarHeaderView: UICollectionReusableView {
         }
     }
     
-    func updateWeekdaysLabelColor(color: UIColor) {
+    func updateWeekdaysLabelColor(_ color: UIColor) {
         if NSCalendar.current.firstWeekday == 2 {
             lblFirst.textColor = color
             lblSecond.textColor = color
