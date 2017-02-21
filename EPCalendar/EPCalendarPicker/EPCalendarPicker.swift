@@ -84,21 +84,14 @@ public class EPCalendarPicker: UICollectionViewController {
 
     
     func inititlizeBarButtons(){
-        
 
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(EPCalendarPicker.onTouchCancelButton))
-        if let cancelTitle = cancelTitle {
-            cancelButton.title = cancelTitle
-        }
+        let cancelButton = UIBarButtonItem(title: cancelTitle ?? "Cancel", style: .plain, target: self, action: #selector(EPCalendarPicker.onTouchCancelButton))
         self.navigationItem.leftBarButtonItem = cancelButton
 
         var arrayBarButtons  = [UIBarButtonItem]()
         
         if multiSelectEnabled {
-            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(EPCalendarPicker.onTouchDoneButton))
-            if let doneTitle = doneTitle {
-                doneButton.title = doneTitle
-            }
+            let doneButton = UIBarButtonItem(title: doneTitle ?? "Done", style: .done, target: self, action: #selector(EPCalendarPicker.onTouchDoneButton))
             arrayBarButtons.append(doneButton)
         }
         
