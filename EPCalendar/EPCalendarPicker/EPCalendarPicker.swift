@@ -97,7 +97,7 @@ public class EPCalendarPicker: UICollectionViewController {
         if multiSelectEnabled {
             let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(EPCalendarPicker.onTouchDoneButton))
             if let doneTitle = doneTitle {
-                cancelButton.title = doneTitle
+                doneButton.title = doneTitle
             }
             arrayBarButtons.append(doneButton)
         }
