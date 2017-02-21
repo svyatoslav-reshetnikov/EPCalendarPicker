@@ -43,6 +43,9 @@ public class EPCalendarPicker: UICollectionViewController {
     
     public var datesCount: Int?
     
+    public var doneTitle: String?
+    public var cancelTitle: String?
+    
     fileprivate(set) public var startYear: Int
     fileprivate(set) public var endYear: Int
     
@@ -84,12 +87,18 @@ public class EPCalendarPicker: UICollectionViewController {
         
 
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(EPCalendarPicker.onTouchCancelButton))
+        if let cancelTitle = cancelTitle {
+            cancelButton.title = cancelTitle
+        }
         self.navigationItem.leftBarButtonItem = cancelButton
 
         var arrayBarButtons  = [UIBarButtonItem]()
         
         if multiSelectEnabled {
             let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(EPCalendarPicker.onTouchDoneButton))
+            if let doneTitle = doneTitle {
+                cancelButton.title = doneTitle
+            }
             arrayBarButtons.append(doneButton)
         }
         
